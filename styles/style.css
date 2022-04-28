@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.top-section {
+    display: grid;
+    height: 480px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.background-container {
+    background: purple;
+    grid-column: 1 / 8;
+    grid-row: 1/2;
+}
+
+.background-container {
+    
+}
+
+.phone {
+    grid-column: 3 / 11;
+    grid-row: 1 / 2;
+    background-color: blue;
+}
