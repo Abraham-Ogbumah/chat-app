@@ -1,3 +1,20 @@
+:root {
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +39,7 @@ body {
 }
 
 .background-container {
-    background: purple;
+    background-image: linear-gradient(var(--light-magenta), var(--light-violet));
     grid-column: 1 / 8;
     grid-row: 1/2;
     height: 380px;
@@ -45,13 +62,13 @@ body {
     box-shadow: 16px 25px 32px -25px grey;
 
     display: grid;
-    grid-template-rows: 65px auto 60px;
+    grid-template-rows: 65px auto;
 }
 
 .phone_header {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: purple;
+    background-image: linear-gradient(to right, var(--light-violet), var(--light-magenta));
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 5px;
@@ -107,4 +124,10 @@ body {
 
 ion-icon {
     color: white;
+}
+
+.phone_message_board {
+    background-color: var(--light-grayish-violet);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
