@@ -27,6 +27,8 @@ body {
     height: 100vh;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 p {
@@ -36,6 +38,7 @@ p {
 .container {
     display: grid;
     grid-template-rows: 1fr auto;
+    margin: 0 auto;
 }
 
 .top-section {
@@ -282,9 +285,10 @@ ion-icon {
     margin-left: 2px;
 }
 
-@media (min-width: 1045px) {
+@media (min-width: 745px) {
     .container {
         display: flex;
+        height: 100%;
     }
     
     .top-section {
@@ -293,17 +297,48 @@ ion-icon {
     
     .background-container {
         grid-column: 1 / 9;
-        height: 750px;
+        height: 630px;
         border-bottom-right-radius: 54%;
         border-bottom-left-radius: 12rem;
-        width: 500px;
+        width: 250px;
+    }
+    
+    .phone {
+        grid-column: 4 / 12;
+        padding-top: 0;
+        margin: auto 0;
+    }
+
+    .bottom-section {
+      width: 40%;
+      align-self: center;
+      text-align: left;
+    }
+}
+
+@media (min-width: 1045px) {  
+    .top-section {
+        width: 60%;
+    }
+    
+    .background-container {
+        grid-column: 1 / 12;
+        height: 730px;
+        width: 585px;
+        border-bottom-right-radius: 60%;
+        border-bottom-left-radius: 20rem;
     }
     
     .phone {
         grid-column: 7 / 12;
         height: 540px;
         padding-top: 0;
-        /* max-width: 280px; */
         margin: auto 0;
+    }
+
+    .bottom-section {
+      width: 40%;
+      align-self: center;
+      text-align: left;
     }
 }
