@@ -36,6 +36,53 @@ p {
 }
 
 .container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 50%;
+    transform: translateX(-200px);
+    background: linear-gradient(var(--light-magenta), 1%, var(--light-violet));
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    z-index: 1;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 50%;
+    transform: translateX(200px);
+    background: var(--pale-violet);
+    opacity: 0.1;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    z-index: 1;
+}
+
+.top-section {
+    position: relative;
+    z-index: 900;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* .container {
     display: grid;
     grid-template-rows: 1fr auto;
     margin: 0 auto;
@@ -53,7 +100,7 @@ p {
     grid-row: 1/2;
     height: 460px;
     border-bottom-right-radius: 25rem;
-}
+} */
 
 .phone {
     grid-column: 3 / 11;
@@ -285,34 +332,40 @@ ion-icon {
     margin-left: 2px;
 }
 
+@media (min-width: 600px) {
+    .container::before {
+        transform: translateX(-100px);
+    }
+
+    .container::after {
+        transform: translateX(100px);
+    }
+}
+
+
 @media (min-width: 745px) {
+    .container {
+        flex-direction: row;
+    }
+    .container::before {
+        height: 65%;
+        transform: translateX(-100px);
+    }
+    .container::after {
+        height: 65%;
+        transform: translateX(100px);
+    }
     .container {
         display: flex;
         height: 100%;
     }
-    
     .top-section {
-        width: 60%;
+        width: 40%;
     }
-    
-    .background-container {
-        grid-column: 1 / 9;
-        height: 630px;
-        border-bottom-right-radius: 54%;
-        border-bottom-left-radius: 12rem;
-        width: 250px;
-    }
-    
-    .phone {
-        grid-column: 4 / 12;
-        padding-top: 0;
-        margin: auto 0;
-    }
-
     .bottom-section {
-      width: 40%;
-      align-self: center;
-      text-align: left;
+        width: 50%;
+        align-self: center;
+        text-align: left;
     }
 }
 
@@ -320,25 +373,9 @@ ion-icon {
     .top-section {
         width: 60%;
     }
-    
-    .background-container {
-        grid-column: 1 / 12;
-        height: 730px;
-        width: 585px;
-        border-bottom-right-radius: 60%;
-        border-bottom-left-radius: 20rem;
-    }
-    
-    .phone {
-        grid-column: 7 / 12;
-        height: 540px;
-        padding-top: 0;
-        margin: auto 0;
-    }
 
-    .bottom-section {
-      width: 40%;
-      align-self: center;
-      text-align: left;
+    .text-content {
+        width: 60%;
+        margin: 0;
     }
 }
