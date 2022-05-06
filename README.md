@@ -36,7 +36,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Abraham Ogbumah](https://www.your-site.com)
-- Frontend Mentor - [@Abraham-Ogbumah](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@theRealhaybee](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@Abraham-Ogbumah](https://www.frontendmentor.io/profile/Abraham-Ogbumah)
+- Twitter - [@theRealhaybee](https://www.twitter.com/theRealhaybee)
 
